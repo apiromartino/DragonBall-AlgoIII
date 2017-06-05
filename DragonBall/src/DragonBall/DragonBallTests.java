@@ -39,7 +39,7 @@ public class DragonBallTests {
 			tablero.moverA(goku,10,7);
 		}
 		catch (PosicionInadecuada e) {
-			Assert.fail("Se intentÃ³ mover al personaje a un lugar que no puede.");
+			Assert.fail("Se intentó mover al personaje a un lugar que no puede.");
 		}
 		Ubicacion ubicacion = goku.obtenerUbicacion();
 		Assert.assertEquals("La ubicacion horizontal fallo",7, ubicacion.obtenerUbicacionHorizontal());
@@ -86,7 +86,7 @@ public class DragonBallTests {
 		Ubicacion ubicacion = goku.obtenerUbicacion();
 		Assert.assertEquals("La ubicacion horizontal fallo",5, ubicacion.obtenerUbicacionHorizontal());
 		Assert.assertEquals("La ubicacion vertical fallo",5, ubicacion.obtenerUbicacionVertical());
-		Ubucacion ubicacion2 = boo.obtenerUbicacion();
+		Ubicacion ubicacion2 = boo.obtenerUbicacion();
 		Assert.assertEquals("La ubicacion horizontal fallo",6, ubicacion2.obtenerUbicacionHorizontal());
 		Assert.assertEquals("La ubicacion vertical fallo",5, ubicacion2.obtenerUbicacionVertical());
 	}
@@ -131,7 +131,7 @@ public class DragonBallTests {
 				goku.transformar(2);
 		} 
 		catch (TansformacionError error){
-			Assert.fail("Fallo la transfomraciÃ³n");
+			Assert.fail("Fallo la transfomración");
 		}
 		tablero.moverA(goku,9,7);
 		Ubicacion ubicacion = goku.obtenerUbicacion();
@@ -153,7 +153,7 @@ public class DragonBallTests {
 		
 		Goku goku = new GokuNormal();
 		Gohan gohan = new GohanNormal();
-		Piccolo piccolo = new Piccolo();
+		Piccolo piccolo = new PiccoloNormal();
 		Cell cell = new CellNormal();
 		Freezer freezer = new FreezerNormal();
 		MajinBoo majinboo = new MajinBooNormal();
