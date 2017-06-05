@@ -1,7 +1,7 @@
 package DragonBall;
 
 import static org.junit.Assert.*;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 public class DragonBallTests {
@@ -25,8 +25,8 @@ public class DragonBallTests {
 		tablero.ubicarEn(goku,7,5);
 		tablero.moverA(goku,9,7);
 		Ubicacion ubicacion = goku.obtenerUbicacion();
-		Assert.assertEquals("La ubicacion horizontal fallo",9, ubicacion.obtenerUbicacionEnX());
-		Assert.assertEquals("La ubicacion verticalsi fallo",5, ubicacion.obtenerUbicacionEnY());
+		Assert.assertEquals("La ubicacion horizontal fallo",9, ubicacion.obtenerUbicacionHorizontal());
+		Assert.assertEquals("La ubicacion verticalsi fallo",5, ubicacion.obtenerUbicacionVertical());
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class DragonBallTests {
 			tablero.moverA(goku,10,7);
 		}
 		catch (PosicionInadecuada e) {
-			Assert.fail("Se intentó mover al personaje a un lugar que no puede.");
+			Assert.fail("Se intentÃ³ mover al personaje a un lugar que no puede.");
 		}
 		Ubicacion ubicacion = goku.obtenerUbicacion();
 		Assert.assertEquals("La ubicacion horizontal fallo",7, ubicacion.obtenerUbicacionHorizontal());
@@ -53,7 +53,7 @@ public class DragonBallTests {
 		Tablero tablero = new Tablero();
 		Goku goku = new GokuNormal();
 		tablero.ubicarEn(goku,5,5);
-		MajinBoo boo = new MajinBooNormal;
+		MajinBoo boo = new MajinBooNormal();
 		tablero.ubicarEn(boo,6,5);
 		try{
 			tablero.moverA(boo,5,5);
@@ -74,8 +74,8 @@ public class DragonBallTests {
 	public void testPasarConUnPersonajePorEncimaDeOtro(){   //No estamos seguros de como se van a mover los pj. Esto es suponinedo que no se pueden mover diagonalmente.
 		Tablero tablero = new Tablero();
 		Goku goku = new GokuNormal();
-		tablero.ubicarEn(goku.5,5);
-		MajinBoo boo = new MajinBooNormal;
+		tablero.ubicarEn(goku,5,5);
+		MajinBoo boo = new MajinBooNormal();
 		tablero.ubicarEn(boo,6,5);
 		try{
 			tablero.moverA(goku,7,5);
@@ -131,7 +131,7 @@ public class DragonBallTests {
 				goku.transformar(2);
 		} 
 		catch (TansformacionError error){
-			Assert.fail("Fallo la transfomración");
+			Assert.fail("Fallo la transfomraciÃ³n");
 		}
 		tablero.moverA(goku,9,7);
 		Ubicacion ubicacion = goku.obtenerUbicacion();
