@@ -1,6 +1,6 @@
 package DragonBall;
 
-public class Personaje {
+public abstract class Personaje {
     protected int vida;
     protected int poder_pelea;
     protected int distancia_ataque;
