@@ -25,6 +25,10 @@ public abstract class Personaje {
         return this.ubicacion;
     }
     
+    public void nuevaUbicacion(int x, int y){
+    	ubicacion = new Ubicacion(x,y);
+    }
+    
     public int obtenerPoderDePelea(){
     	return this.poder_pelea;
     }
